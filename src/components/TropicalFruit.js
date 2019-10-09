@@ -11,69 +11,10 @@ import MenuIcon from '@material-ui/icons/Menu'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
-import CardHeader from '@material-ui/core/CardHeader'
-import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
 import Paper from '@material-ui/core/Paper'
 import 'typeface-cookie'
 import Nutrients from './Nutrients'
-const drawerWidth = 150
-
-const useStyles = makeStyles(theme => ({
-	root: {
-		display: 'flex'
-	},
-	card: {
-		maxWidth: 345
-	},
-	cardHeader: {
-		color: '#FFF',
-		fontFamily: 'Raleway'
-	},
-	banana: {
-		fontFamily: 'cookie',
-		fontSize: '2em',
-		color: '#FFF'
-	},
-	media: {
-		height: 345
-	},
-	drawer: {
-		[theme.breakpoints.up('sm')]: {
-			width: drawerWidth,
-			flexShrink: 0
-		}
-	},
-	paper: {
-		backgroundColor: '#FFd0bb',
-		padding: '32px'
-	},
-	appBar: {
-		marginLeft: drawerWidth,
-		[theme.breakpoints.up('sm')]: {
-			width: `calc(100% - ${drawerWidth}px)`
-		}
-	},
-	menuButton: {
-		marginRight: theme.spacing(2),
-		[theme.breakpoints.up('sm')]: {
-			display: 'none'
-		}
-	},
-	toolbar: theme.mixins.toolbar,
-	twoCol: {
-		display: 'grid',
-		gridTemplateColumns: '2fr 1fr'
-	},
-	drawerPaper: {
-		width: drawerWidth
-	},
-	content: {
-		flexGrow: 1,
-		padding: theme.spacing(3)
-	}
-}))
+import {useStyles} from './Styles.js'
 
 function TropicalFruit(props) {
 	const theme = useTheme()
@@ -101,16 +42,183 @@ function TropicalFruit(props) {
         break;
       case 'Avocado':
         fruitNum = '09038';
+        break;     
+      case 'Bora Jujube':
+        fruitNum = '09146';
         break;
-      case 'Cherries':
-        console.log('Cherries are $3.00 a pound.');
-        break;
-      case 'Mangoes':
-      case 'Papayas':
-        console.log('Mangoes and papayas are $2.79 a pound.');
-        break;
-      default:
-        console.log('Sorry, we are out of ');
+      case 'Breadfruit':
+          fruitNum = '09059';
+          break
+      case 'Carambola':
+          fruitNum = '09060';
+          break
+      case 'Cashew':
+          fruitNum = '12087';
+          break
+      case 'Cassava':
+          fruitNum = '11134';
+          break          
+      case 'Chickpea':
+          fruitNum = '16056';
+          break          
+      case 'Chili Pepper':
+          fruitNum = '11819';
+          break
+      case 'Clove':
+          fruitNum = '02011';
+          break
+      case 'Coconut':
+          fruitNum = '12104';
+          break
+      case 'Coriander':
+          fruitNum = '02012';
+          break      
+      case 'Dill':
+          fruitNum = '02016';
+          break            
+      case 'Durian':
+          fruitNum = '09422';
+          break  
+      case 'Durian':
+          fruitNum = '09422';
+          break  
+      case 'Fennel':
+          fruitNum = '11957';
+          break  
+      case 'Fenugreek':
+          fruitNum = '02019';
+          break  
+      case 'Fig':
+          fruitNum = '09089';
+          break  
+      case 'Ginger':
+          fruitNum = '11216';
+          break  
+      case 'Guava':
+          fruitNum = '09139';
+          break  
+      case 'Hazelnut':
+          fruitNum = '12120';
+          break 
+      case 'Jackfruit':
+          fruitNum = '09144';
+          break 
+      case 'Jambolan':
+          fruitNum = '09145';
+          break 
+      case 'Lentil':
+          fruitNum = '16069';
+          break 
+      case 'Lime':
+          fruitNum = '09159';
+          break
+      case 'Longan':
+          fruitNum = '09172';
+          break
+      case 'Loquat':
+          fruitNum = '09174';
+          break
+      case 'Lychee':
+          fruitNum = '09164';
+          break          
+      case 'Macadamia':
+          fruitNum = '12131';
+          break   
+      case 'Mango':
+          fruitNum = '09176';
+          break   
+      case 'Mango':
+          fruitNum = '09176';
+          break   
+      case 'Moringa':
+          fruitNum = '11222';
+          break   
+      case 'Mung':
+          fruitNum = '16080';
+          break   
+      case 'Mustard':
+          fruitNum = '11270';
+          break   
+      case 'Naranjilla':
+          fruitNum = '09450';
+          break   
+      case 'Nutmeg':
+          fruitNum = '02025';
+          break   
+      case 'Okra':
+          fruitNum = '11278';
+          break   
+      case 'Olive':
+          fruitNum = '09193';
+          break   
+      case 'Oregano':
+          fruitNum = '02027';
+          break  
+      case 'Papaya':
+          fruitNum = '09226';
+          break  
+      case 'Peanut':
+          fruitNum = '16087';
+          break  
+      case 'Pecan':
+          fruitNum = '12142';
+          break  
+      case 'Pepper':
+          fruitNum = '11333';
+          break  
+      case 'Persimmon':
+          fruitNum = '09265';
+          break  
+      case 'Pineapple':
+          fruitNum = '09266';
+          break 
+      case 'Pistachio':
+          fruitNum = '12151';
+          break 
+      case 'Pomegranate':
+          fruitNum = '09286';
+          break 
+      case 'Pommelo':
+          fruitNum = '09295';
+          break 
+      case 'Prickly Pear':
+          fruitNum = '09287';
+          break 
+      case 'Rosemary':
+          fruitNum = '02063';
+          break 
+      case 'Sapodilla':
+          fruitNum = '09313';
+          break
+      case 'Sesame':
+          fruitNum = '12023';
+          break
+      case 'Star Anise':
+          fruitNum = '02002';
+          break
+      case 'Strawberry Guava':
+          fruitNum = '09140';
+          break
+      case 'Strawberry Guava':
+          fruitNum = '09140';
+          break
+      case 'Strawberry Guava':
+          fruitNum = '09321';
+          break
+      case 'Sugar Apple':
+          fruitNum = '09321';
+          break          
+      case 'Tamarind':
+          fruitNum = '09322';
+          break     
+      case 'Tamarind':
+          fruitNum = '09322';
+          break 
+      case 'Turmeric':
+          fruitNum = '02043';
+          break 
+          default:
+        console.log('no info');
     }
 
     const urls = [
@@ -175,20 +283,60 @@ function TropicalFruit(props) {
 					'Adzuki',
 					'Almond',
 					'Avocado',
-					'Bael Fruit',
-					'Betelnut',
-					'Bora Berry',
 					'Bora Jujube',
 					'Breadfruit',
-					'Cacao',
-					'Calamondin',
 					'Carambola',
 					'Cashew',
-					'Cashew Apple',
 					'Cassava',
 					'Chickpea',
 					'Chili Pepper',
-					'Clove'
+					'Clove',
+          'Coconut',
+          'Coriander',
+          'Dill',
+          'Durian',
+          'Fennel',
+          'Fenugreek',
+          'Fig',
+          'Ginger',
+          'Guava',
+          'Hazelnut',
+          'Jackfruit',
+          'Jambolan',
+          'Lentil',
+          'Lime',
+          'Longan',
+          'Loquat',
+          'Lychee',
+          'Macadamia',
+          'Mango',
+          'Moringa',
+          'Mung',
+          'Mustard',
+          'Naranjilla',
+          'Nutmeg',
+          'Okra',
+          'Olive',
+          'Oregano',
+          'Papaya',
+          'Peanut',
+          'Pecan',
+          'Pepper',
+          'Persimmon',
+          'Pineapple',
+          'Pistachio',
+          'Pomegranate',
+          'Pommelo',
+          'Prickly Pear',
+          'Rosemary',
+          'Sapodilla',
+          'Sesame',
+          'Sittu',
+          'Star Anise',
+          'Strawberry Guava',
+          'Sugar Apple',
+          'Tamarind',
+          'Turmeric',
 				].map((text, index) => (
 					<ListItem onClick={handleClick} button key={text}>
 						<ListItemText primary={text} />
@@ -314,29 +462,23 @@ function TropicalFruit(props) {
 			<main className={classes.content}>
 				<div className={classes.toolbar} />
 				<div className={classes.twoCol}>
-					<Paper className={classes.paper} elevation={12}>
-						<div>
-							<Card>
-								<CardHeader title={fruitData.tfvname} />
-								<CardMedia
-									className={classes.media}
-									image={fruitData.imageurl}
-									title={fruitData.tfvname}
+				
+							<Paper className={classes.content}>
+								<h2>{fruitData.tfvname}</h2>
+								<img className={classes.media}
+									src={fruitData.imageurl}
 								/>
-								<CardContent>
 									<p>{fruitData.description}</p>
-								</CardContent>
-							</Card>
-
-							<p>{fruitData.uses}</p>
-							<p>{fruitData.propagation}</p>
-							<p>{fruitData.soil}</p>
-							<p>{fruitData.climate}</p>
-							<p>{fruitData.health}</p>
-						</div>
-					</Paper>
+                  <p>{fruitData.uses}</p>
+                  <p>{fruitData.propagation}</p>
+                  <p>{fruitData.soil}</p>
+                  <p>{fruitData.climate}</p>
+                  <p>{fruitData.health}</p>
+							</Paper>
+          <Paper className={classes.content}>
+          <Nutrients nutrientData={nutrientData} nutrientGroup={nutrientData.nutrientGroup}/>
+          </Paper>
 				</div>
-				<Nutrients nutrientData={nutrientData} nutrientGroup={nutrientData.nutrientGroup}/>
 			</main>
 		</div>
 	)

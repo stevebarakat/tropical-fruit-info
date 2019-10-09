@@ -1,17 +1,17 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2'
+import { HorizontalBar } from 'react-chartjs-2'
 
 export default function Nutrients(props){
   console.log(props.nutrientData);
   let nutrients = props.nutrientData;
   return(
     <div className='chart-container'>
-					<h2>{nutrients.fruitName}</h2>
-          <p>{props.nutrientGroup}</p>
-					<Bar
+					<h2>Nutrients</h2>
+          <p>{nutrients.fruitName}</p>
+					<HorizontalBar
 						data={nutrients.data}
-						width={4}
-						height={3}
+						width={1}
+						height={2}
 						options={{
 							maintainAspectRatio: true
 						}}
