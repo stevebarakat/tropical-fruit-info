@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.4.2",
     "@material-ui/icons": "^4.4.1",
+    "@reach/router": "^1.2.1",
     "chart.js": "^2.8.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "lodash": "^4.17.15",

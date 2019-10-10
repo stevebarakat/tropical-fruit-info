@@ -14,6 +14,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import 'typeface-cookie'
 import Nutrients from './Nutrients'
+import Sidebar from './Sidebar'
 import {useStyles} from './Styles.js'
 
 function TropicalFruit(props) {
@@ -23,13 +24,8 @@ function TropicalFruit(props) {
 	const [mobileOpen, setMobileOpen] = React.useState(false)
 	const [fruitData, setFruitData] = useState('')
 	const [nutrientData, setNutrientData] = useState([])
-	// const [fruitNum, setFruitNum] = useState(null)
 
-	const handleDrawerToggle = () => {
-		setMobileOpen(!mobileOpen)
-	}
-
-	const handleClick = e => {
+  const handleClick = e => {
     let fruitNum = '09089';
 		const fruit = e.target.innerText
 
@@ -79,9 +75,6 @@ function TropicalFruit(props) {
       case 'Durian':
           fruitNum = '09422';
           break  
-      case 'Durian':
-          fruitNum = '09422';
-          break  
       case 'Fennel':
           fruitNum = '11957';
           break  
@@ -123,9 +116,6 @@ function TropicalFruit(props) {
           break          
       case 'Macadamia':
           fruitNum = '12131';
-          break   
-      case 'Mango':
-          fruitNum = '09176';
           break   
       case 'Mango':
           fruitNum = '09176';
@@ -199,21 +189,12 @@ function TropicalFruit(props) {
       case 'Strawberry Guava':
           fruitNum = '09140';
           break
-      case 'Strawberry Guava':
-          fruitNum = '09140';
-          break
-      case 'Strawberry Guava':
-          fruitNum = '09321';
-          break
       case 'Sugar Apple':
           fruitNum = '09321';
           break          
       case 'Tamarind':
           fruitNum = '09322';
           break     
-      case 'Tamarind':
-          fruitNum = '09322';
-          break 
       case 'Turmeric':
           fruitNum = '02043';
           break 
@@ -274,77 +255,6 @@ function TropicalFruit(props) {
 		}
 		getAllUrls(urls)
 	}
-
-	const drawer = (
-		<div>
-			<div className={classes.toolbar} />
-			<List>
-				{[
-					'Adzuki',
-					'Almond',
-					'Avocado',
-					'Bora Jujube',
-					'Breadfruit',
-					'Carambola',
-					'Cashew',
-					'Cassava',
-					'Chickpea',
-					'Chili Pepper',
-					'Clove',
-          'Coconut',
-          'Coriander',
-          'Dill',
-          'Durian',
-          'Fennel',
-          'Fenugreek',
-          'Fig',
-          'Ginger',
-          'Guava',
-          'Hazelnut',
-          'Jackfruit',
-          'Jambolan',
-          'Lentil',
-          'Lime',
-          'Longan',
-          'Loquat',
-          'Lychee',
-          'Macadamia',
-          'Mango',
-          'Moringa',
-          'Mung',
-          'Mustard',
-          'Naranjilla',
-          'Nutmeg',
-          'Okra',
-          'Olive',
-          'Oregano',
-          'Papaya',
-          'Peanut',
-          'Pecan',
-          'Pepper',
-          'Persimmon',
-          'Pineapple',
-          'Pistachio',
-          'Pomegranate',
-          'Pommelo',
-          'Prickly Pear',
-          'Rosemary',
-          'Sapodilla',
-          'Sesame',
-          'Sittu',
-          'Star Anise',
-          'Strawberry Guava',
-          'Sugar Apple',
-          'Tamarind',
-          'Turmeric',
-				].map((text, index) => (
-					<ListItem onClick={handleClick} button key={text}>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List>
-		</div>
-	)
 
 	useEffect(() => {
     const urls = [
@@ -410,55 +320,9 @@ function TropicalFruit(props) {
 		getAllUrls(urls)
 	}, [])
 	return (
-		<div className={classes.root}>
-			<CssBaseline />
-			<AppBar position='fixed' className={classes.appBar}>
-				<Toolbar>
-					<IconButton
-						color='inherit'
-						aria-label='open drawer'
-						edge='start'
-						onClick={handleDrawerToggle}
-						className={classes.menuButton}
-					>
-						<MenuIcon />
-					</IconButton>
-					<Typography className={classes.banana} variant='h6' noWrap>
-						Tropical Fruit Info
-					</Typography>
-				</Toolbar>
-			</AppBar>
-			<nav className={classes.drawer} aria-label='mailbox folders'>
-				{/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-				<Hidden smUp implementation='css'>
-					<Drawer
-						container={container}
-						variant='temporary'
-						anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-						open={mobileOpen}
-						onClose={handleDrawerToggle}
-						classes={{
-							paper: classes.drawerPaper
-						}}
-						ModalProps={{
-							keepMounted: true // Better open performance on mobile.
-						}}
-					>
-						{drawer}
-					</Drawer>
-				</Hidden>
-				<Hidden xsDown implementation='css'>
-					<Drawer
-						classes={{
-							paper: classes.drawerPaper
-						}}
-						variant='permanent'
-						open
-					>
-						{drawer}
-					</Drawer>
-				</Hidden>
-			</nav>
+    <div className={classes.root}>
+    <CssBaseline />
+    <Sidebar handleClick={handleClick}/>
 			<main className={classes.content}>
 				<div className={classes.toolbar} />
 				<div className={classes.twoCol}>
@@ -467,6 +331,7 @@ function TropicalFruit(props) {
 								<h2>{fruitData.tfvname}</h2>
 								<img className={classes.media}
 									src={fruitData.imageurl}
+                  alt={fruitData.tfvname}
 								/>
 									<p>{fruitData.description}</p>
                   <p>{fruitData.uses}</p>
@@ -480,7 +345,7 @@ function TropicalFruit(props) {
           </Paper>
 				</div>
 			</main>
-		</div>
+      </div>
 	)
 }
 

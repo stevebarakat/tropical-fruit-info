@@ -5,13 +5,6 @@ const useStyles = makeStyles(theme => ({
 	root: {
 		display: 'flex'
 	},
-	card: {
-		maxWidth: 345
-	},
-	cardHeader: {
-		color: '#FFF',
-		fontFamily: 'Raleway'
-	},
 	banana: {
 		fontFamily: 'cookie',
 		fontSize: '2em',
@@ -53,7 +46,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	content: {
 		flexGrow: 1,
-		padding: theme.spacing(3)
+    padding: theme.spacing(3),
 	}
 }))
 
