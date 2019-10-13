@@ -18,102 +18,12 @@ function Sidebar(props) {
   const { container } = props;
   const classes = useStyles();
   const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const drawer = (
-		<div>
-			<div className={classes.toolbar} />
-			<List>
-				{[
-					'Adzuki',
-					'Almond',
-					'Avocado',
-					'Bora Jujube',
-					'Breadfruit',
-					'Carambola',
-					'Cashew',
-					'Cassava',
-					'Chickpea',
-					'Chili Pepper',
-					'Clove',
-          'Coconut',
-          'Coriander',
-          'Dill',
-          'Durian',
-          'Fennel',
-          'Fenugreek',
-          'Fig',
-          'Ginger',
-          'Guava',
-          'Hazelnut',
-          'Jackfruit',
-          'Jambolan',
-          'Lentil',
-          'Lime',
-          'Longan',
-          'Loquat',
-          'Lychee',
-          'Macadamia',
-          'Mango',
-          'Moringa',
-          'Mung',
-          'Mustard',
-          'Naranjilla',
-          'Nutmeg',
-          'Okra',
-          'Olive',
-          'Oregano',
-          'Papaya',
-          'Peanut',
-          'Pecan',
-          'Pepper',
-          'Persimmon',
-          'Pineapple',
-          'Pistachio',
-          'Pomegranate',
-          'Pommelo',
-          'Prickly Pear',
-          'Rosemary',
-          'Sapodilla',
-          'Sesame',
-          'Sittu',
-          'Star Anise',
-          'Strawberry Guava',
-          'Sugar Apple',
-          'Tamarind',
-          'Turmeric',
-				].map((text, index) => (
-					<ListItem onClick={props.handleClick} button key={text}>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List>
-		</div>
-	)
+  
 
   return (
     <div className={classes.root}>
 			<CssBaseline />
-			<AppBar position='fixed' className={classes.appBar}>
-				<Toolbar>
-					<IconButton
-						color='inherit'
-						aria-label='open drawer'
-						edge='start'
-						onClick={handleDrawerToggle}
-						className={classes.menuButton}
-					>
-						<MenuIcon />
-					</IconButton>
-					<Typography className={classes.banana} variant='h6' noWrap>
-						Tropical Fruit Info
-					</Typography>
-				</Toolbar>
-			</AppBar>
 			<nav className={classes.drawer} aria-label='mailbox folders'>
 				{/* The implementation can be swapped with js to avoid SEO duplication of links. */}
 				<Hidden smUp implementation='css'>
@@ -121,8 +31,8 @@ function Sidebar(props) {
 						container={container}
 						variant='temporary'
 						anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-						open={mobileOpen}
-						onClose={handleDrawerToggle}
+						open={props.mobileOpen}
+						onClose={props.handleDrawerToggle}
 						classes={{
 							paper: classes.drawerPaper
 						}}
@@ -130,7 +40,7 @@ function Sidebar(props) {
 							keepMounted: true // Better open performance on mobile.
 						}}
 					>
-						{drawer}
+						{props.drawer}
 					</Drawer>
 				</Hidden>
 				<Hidden xsDown implementation='css'>
@@ -141,7 +51,7 @@ function Sidebar(props) {
 						variant='permanent'
 						open
 					>
-						{drawer}
+						{props.drawer}
 					</Drawer>
 				</Hidden>
 			</nav>
