@@ -1,14 +1,8 @@
 import React from 'react'
-import TropicalFruit from './TropicalFruit'
-import {theme, ThemeProvider} from './Theme.js'
+import Layout from './Layout'
 
 const App = (props) => (
-	<div className="container">
-    
-    <ThemeProvider theme={theme}>
-      <TropicalFruit />
-    </ThemeProvider>
-	</div>
+  <Layout />
 )
 
-export default App
+export default App;
