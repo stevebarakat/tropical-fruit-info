@@ -11,6 +11,7 @@ import {useStyles} from './Styles.js'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Link } from "@reach/router";
 import CircularProgress from '@material-ui/core/CircularProgress';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 function Layout(props) {
   const theme = useTheme();
