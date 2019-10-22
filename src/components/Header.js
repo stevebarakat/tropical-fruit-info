@@ -22,7 +22,7 @@ function Header(props) {
 						<MenuIcon />
 					</IconButton>
 					<Typography className={classes.banana} variant='h6' noWrap>
-						Tropical Fruit Info
+						Tropical Fruit &amp; Vegetable Info
 					</Typography>
 				</Toolbar>
 			</AppBar>

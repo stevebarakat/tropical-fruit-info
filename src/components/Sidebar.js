@@ -8,8 +8,6 @@ function Sidebar(props) {
   const { container } = props;
   const classes = useStyles();
 
-  
-
   return (
     <>
 			<nav className={classes.drawer} aria-label='mailbox folders'>

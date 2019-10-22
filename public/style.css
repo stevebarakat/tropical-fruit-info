@@ -1,0 +1,32 @@
+body{
+  background-color: darkgreen !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 25px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  width: 12px;
+  box-shadow: inset 0 0 1px black; 
+  background: #222; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(50, 80%, 50%); 
+  border: 9px double #222;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb {
+  background: #222; 
+  border-radius: 10px;
+  border: 5px double hsl(50, 80%, 50%); 
+}
+
+a{
+  text-decoration: none;
+}
