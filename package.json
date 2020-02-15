@@ -20,7 +20,7 @@
     "typeface-cookie": "0.0.71",
     "typescript": "^3.6.4",
     "use-data-api": "^1.0.1",
-    "yarn": "^1.19.1"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "start": "react-scripts start",
